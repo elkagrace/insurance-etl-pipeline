@@ -12,7 +12,6 @@ ETL/ELT pipeline for insurance claims analytics using ClickHouse, dbt, Airflow, 
 - **Визуализация**: Power BI (дашборд с KPI, графиками)
 
 ## 📊 Модель данных
-![Lineage](link_to_screenshot)
 - `stg_claims`, `stg_contracts`, `stg_vehicles` – очищенные сырые таблицы
 - `int_claims_enriched` – объединение
 - `dm_claims` – витрина
@@ -25,7 +24,7 @@ ETL/ELT pipeline for insurance claims analytics using ClickHouse, dbt, Airflow, 
 
 ## 📈 Дашборд (Power BI)
 Скриншоты дашборда:  
-![Dashboard](screenshot.png)
+![Dashboard](Дашборд.jpg)
 
 ## 🧰 Технологии
 - Python 3.11, dbt-core, dbt-clickhouse
