@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: insurance_db
+    tables:
+      - name: claims
+      - name: contracts
+      - name: vehicles
+
+models:
+  - name: stg_claims
+    description: "Очищенные данные о страховых случаях из таблицы claims. Приведены типы, очищены суммы, добавлено days_to_report."
+    columns:
+      - name: claim_id
+        description: "Уникальный идентификатор страхового случая"
+        tests:
+          - unique
+          - not_null
+      - name: damage_amount
+        description: "Заявленная сумма ущерба, очищена от валютных символов (Decimal)"
+      - name: settlement_status
+        description: "Бизнес-статус урегулирования: settled, rejected, pending"
+
+  - name: int_claims_enriched
+    description: "Промежуточный слой: объединены claims, contracts, vehicles. Обогащены данными об автомобиле и полисе."
+
+  - name: dm_claims
+    description: "Финальная витрина для отдела урегулирования убытков. Содержит метрики для анализа эффективности."
+    columns:
+      - name: settlement_ratio
+        description: "Коэффициент выплаты (indemnified / damage). 0..1"
