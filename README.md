@@ -15,7 +15,7 @@ ETL/ELT pipeline for insurance claims analytics using ClickHouse, dbt, Airflow, 
 ![Lineage](link_to_screenshot)
 - `stg_claims`, `stg_contracts`, `stg_vehicles` – очищенные сырые таблицы
 - `int_claims_enriched` – объединение
-- `dm_claims_settlement_reporting` – витрина
+- `dm_claims` – витрина
 
 ## 🚀 Запуск проекта
 1. Создать кластер ClickHouse в Yandex Cloud.
@@ -34,4 +34,4 @@ ETL/ELT pipeline for insurance claims analytics using ClickHouse, dbt, Airflow, 
 - Power BI Desktop / Service
 
 ## 👩‍💻 Автор
-Ваше имя, ссылка на LinkedIn / GitHub
+Елена Губайдуллина, https://github.com/elkagrace/insurance-etl-pipeline.git
